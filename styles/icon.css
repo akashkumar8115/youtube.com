@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.iconlist {
+  /* border: 1px solid black; */
+  width: auto;
+}
+.iconlist li {
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  height: 70px;
+  width: 70px;
+}
+
+.icon {
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  /* border: 1px solid rgb(45, 38, 38); */
+  padding-top: 0.42rem;
+  padding-left: 0rem;
+  /* padding: auto; */
+}
+.iconlist li :hover {
+  /* background-color: rgb(157, 156, 156); */
+  border-radius: 10px;
+}
+
+.boxicon {
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  /* height: 32px; */
+  height: 25px;
+  width: 30px;
+  /* border: 1px solid red; */
+}
+
+.icontext {
+  /* border: 1px solid rgb(250, 199, 199); */
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  padding: auto;
+  font-size: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#home2 {
+  display: none;
+}
+
+#sub2 {
+  display: none;
+}
+
+#lib2 {
+  display: none;
+}
+#short2 {
+  display: none;
+}
+
+/* css for resposnible in moble view */
+.search-buttons {
+  display: none;
+}
+.back-button {
+  display: none;
+}
+@media (max-width: 520px) {
+  /* search navbar ka css */
+  .header {
+    /* border: 1px solid rgb(233, 12, 12); */
+    height: 50px;
+    width: 100vw;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .youtube-logo {
+    margin-left: 0.2rem;
+  }
+
+  /* search box */
+  .search-buttons {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    position: fixed;
+    margin-top: 0.5rem;
+    margin-left: 19rem;
+    background-color: white;
+    border: none;
+  }
+  .search-icons {
+    pointer-events: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .back-button {
+    display: block;
+    height: 38px;
+    width: 38px;
+    margin: auto;
+    position: fixed;
+    margin-top: 5px;
+    margin-left: 0.5rem;
+    background-color: rgb(242, 240, 240);
+    border-radius: 999px;
+    border: none;
+  }
+  .back-button svg {
+    /* border: 1px solid red; */
+    height: 30px;
+    width: 30px;
+    margin: auto;
+  }
+  .style-scope {
+    pointer-events: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .middle-section {
+    flex: 1;
+    padding: auto;
+    margin-left: auto;
+    /* max-width: 200px; */
+    display: flex;
+    align-items: center;
+    display: none;
+  }
+
+  .Search-bar {
+    flex: 1;
+    height: 41px;
+    width: 60vw;
+    max-width: 75vw;
+    border-right: none;
+    padding-left: 1.5rem;
+    margin-left: 47px;
+    margin-top: 5px;
+  }
+  .search-button {
+    height: 41px;
+    width: 66px;
+    margin-left: -5px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-left: none;
+    position: absolute;
+  }
+  .Search-bar:hover{
+    border-right: none;
+  }
+  .voice-search-button {
+    width: 40px;
+    height: 40px;
+    margin-left: 64px;
+    margin-top: 5px;
+    position: absolute;
+  }
+
+
+
+  /* right section */
+  .right-section div {
+    /* border: 1px solid black; */
+    width: 90%;
+    padding-left: 60%;
+  }
+  .create-icon {
+    display: none;
+  }
+
+  .notifications-icon {
+    display: none;
+  }
+  .current-user-icon {
+    height: 32px;
+    border-radius: 45px;
+    cursor: pointer;
+    margin-right: 0px;
+  }
+  /* neeche ka navbar home shortka css */
+  #left #items ol {
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    margin-top: 80vh;
+  }
+  #left #items ol li {
+    border: none;
+    border-radius: 0px;
+    background-color: rgb(255, 255, 255);
+    height: 54px;
+    width: 25%;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+  }
+  .boxicon {
+    height: 25px;
+    width: auto;
+  }
+
+  /* vedio grid ka css */
+  .video-grid {
+    margin-left: 0px;
+    padding: 0px;
+    display: inline;
+    width: 100%;
+  }
+  .right {
+    width: 0px;
+  }
+}

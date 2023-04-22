@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: white;
+  top: 0px;
+  z-index: 2018;
+  position: fixed;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid rgb(241, 241, 241);
+  margin-bottom: 1rem;
+  box-shadow: 1px 1px 1px 1px rgb(237, 236, 236);
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+}
+.hamburger-menu:hover {
+  cursor: pointer;
+}
+
+.youtube-logo {
+  height: 20px;
+  margin-left: 20px;
+}
+.middle-section {
+  flex: 1;
+  margin-left: 70px;
+  /* margin-left: auto; */
+  /* margin-right: 35px; */
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.Search-bar {
+  flex: 1;
+  height: 41px;
+  border-style: solid;
+  border-right: none;
+  border: 1px solid black;
+  border-radius: 42px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  outline: none;
+  padding-left: 1.5rem;
+}
+.Search-bar:hover {
+  border: 1px solid blue;
+}
+.Search-bar::placeholder {
+  font-family: Roboto, Arial;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.search-button {
+  height: 41px;
+  width: 66px;
+  border-radius: 42px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border: 1px solid rgb(100, 100, 100);
+  background-color: rgb(245, 245, 245);
+  margin-left: -1px;
+  margin-right: 10px;
+  border-left: none;
+}
+.search-button:hover {
+  background-color: rgb(232, 231, 231);
+}
+.search-icon {
+  height: 25px;
+  margin-top: 4px;
+}
+
+.voice-search-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #f8f8f8;
+}
+.voice-search-button:hover {
+  background-color: #e9e7e7;
+}
+.voice-search-icon {
+  height: 24px;
+  align-items: center;
+}
+
+.right-section {
+  /* border: 1px solid rgb(249, 6, 6); */
+  width: 200px;
+  display: flex;
+  /* align-items: right; */
+  justify-content: space-between;
+  justify-items: auto;
+}
+.right-section div {
+  padding: auto;
+  margin: auto;
+  justify-content: space-between;
+  /* border: 1px solid rgb(249, 6, 6); */
+  width: 100%;
+  justify-content: space-between;
+}
+.right-section div img {
+  /* padding: 0.2rem; */
+  margin-left: 1.8rem;
+}
+.create-icon {
+  height: 24px;
+  cursor: pointer;
+}
+
+.youtube-apps-icon {
+  height: 24px;
+  display: none;
+  cursor: pointer;
+}
+
+.notifications-icon {
+  height: 24px;
+  cursor: pointer;
+}
+
+.current-user-icon {
+  height: 32px;
+  border-radius: 45px;
+  cursor: pointer;
+}

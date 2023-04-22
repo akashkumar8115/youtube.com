@@ -1,0 +1,35 @@
+.main {
+  /* border: 1px solid rgb(108, 3, 255); */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  padding: auto;
+  margin-top: 60px;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+.left {
+  /* border: 1px solid rgb(83, 2, 197); */
+  width: 10%;
+  height: 100vh;
+  position: fixed;
+  z-index: 12;
+}
+.guide-icon {
+  height: 40px;
+  border: 1px solid rgb(252, 11, 11);
+  width: auto;
+}
+
+.video-grid {
+  /* border: 1px solid rgb(81, 30, 152); */
+  margin-left: 8%;
+  width: 90%;
+  height: auto;
+}
+.right {
+  /* border: 1px solid rgb(98, 89, 111); */
+  width: 0%;
+  height: auto;
+}

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles//img.css">
+    <link rel="stylesheet" href="./styles//main.css">
+    <link rel="stylesheet" href="./styles/icon.css">
+    <script src="./script.js"></script>
+    <title>
+        Youtube.com clone
+    </title>
+</head>
+<style>
+    .left * {
+        align-items: center;
+        text-align: center;
+    }
+
+    .video-title {
+        /* isko hi search kran h */
+    }
+</style>
+
+<body>
+    <div class="header">
+
+        <div class="left-section" id="left-section">
+            <img class="hamburger-menu"
+                src="https://supersimple.dev/public/img/exercises/youtube/icons/hamburger-menu.svg">
+            <img class="youtube-logo" src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-logo.svg">
+        </div>
+
+        <button class="search-buttons" id="search-buttons" onclick="searchbox()">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                class="search-icons style-scope yt-icon">
+                <g class="style-scope yt-icon">
+                    <path
+                        d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"
+                        class="style-scope yt-icon"></path>
+                </g>
+            </svg>
+        </button>
+
+        <div class="middle-section" id="middle-section">
+            <!-- <form action=""> -->
+            <button class="back-button" id="back-button" onclick="backbutton()">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon">
+                    <g mirror-in-rtl="" class="style-scope yt-icon">
+                        <path d="M21,11v1H5.64l6.72,6.72l-0.71,0.71L3.72,11.5l7.92-7.92l0.71,0.71L5.64,11H21z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </button>
+
+            <input class="Search-bar" type="search" name="search" id="search" placeholder="Search..." value=""
+                onkeyup="search()">
+
+            <button class=search-button>
+                <img class="search-icon" src="https://supersimple.dev/public/img/exercises/youtube/icons/search.svg">
+            </button>
+
+            <button class="voice-search-button" onclick="speek()">
+                <img class="voice-search-icon"
+                    src="https://supersimple.dev/public/img/exercises/youtube/icons/voice-search-icon.svg">
+            </button>
+            <!-- </form> -->
+        </div>
+        <div class="right-section" id="right-section">
+            <div>
+                <img src="https://supersimple.dev/public/img/exercises/youtube/icons/upload.svg" class="create-icon">
+                <img src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-apps.svg"
+                    class="youtube-apps-icon">
+                <img src="https://supersimple.dev/public/img/exercises/youtube/icons/notifications.svg"
+                    class="notifications-icon">
+                <img src="./channels4_profile.jpg" alt="" class="current-user-icon">
+                <!-- <img src="https://photos.app.goo.gl/VknJb5eD1hAW8Ge96" alt="akash" class="current-user-icon"> -->
+                <!-- <img src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/my-channel.jpeg"
+                    class="current-user-icon"> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="left" id="left">
+            <div id="items" class="style-scope">
+                <ol class="iconlist">
+
+                    <li onclick="home0()">
+                        <div class="icon">
+                            <div class="boxicon">
+                                <svg id="home1" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                    focusable="false" class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <g class="style-scope yt-icon">
+                                        <path
+                                            d="M12,4.33l7,6.12V20H15V14H9v6H5V10.45l7-6.12M12,3,4,10V21h6V15h4v6h6V10L12,3Z"
+                                            class="style-scope yt-icon"></path>
+                                        <!-- <path d="M4,10V21h6V15h4v6h6V10L12,3Z" class="style-scope yt-icon"></path> -->
+                                    </g>
+                                </svg>
+
+                                <svg id="home2" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                    focusable="false" class="style-scope yt-icon"
+                                    style="pointer-events: none; width: 100%; height: 100%;">
+                                    <g class="style-scope yt-icon">
+                                        <path d="M4,10V21h6V15h4v6h6V10L12,3Z" class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="icontext"><span>Home</span></div>
+                        </div>
+                    </li>
+
+                    <li onclick="short0()">
+                        <div class="icon">
+                            <div class="boxicon">
+                                <svg id="short1" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                    focusable="false" class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <g height="24" viewBox="0 0 24 24" width="24" class="style-scope yt-icon">
+                                        <path
+                                            d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33c-.77-.32-1.2-.5-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86l-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg>
+                                <svg id="short2" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                    focusable="false" class="style-scope yt-icon"
+                                    style="pointer-events: none; width: 100%; height: 100%;">
+                                    <g height="24" viewBox="0 0 24 24" width="24" class="style-scope yt-icon">
+                                        <path
+                                            d="M17.77 10.32c-.77-.32-1.2-.5-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zM10 14.65v-5.3L15 12l-5 2.65z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg>
+
+                            </div>
+                            <div class="icontext">Shorts</div>
+                        </div>
+                    </li>
+
+                    <li onclick="sub0()">
+                        <div class="icon">
+                            <div class="boxicon">
+                                <svg id="sub1" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <g class="style-scope yt-icon">
+                                        <path
+                                            d="M10,18v-6l5,3L10,18z M17,3H7v1h10V3z M20,6H4v1h16V6z M22,9H2v12h20V9z M3,10h18v10H3V10z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg>
+
+                                <svg id="sub2" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none;  width: 100%; height: 100%;">
+                                    <g class="style-scope yt-icon">
+                                        <path d="M20,7H4V6h16V7z M22,9v12H2V9H22z M15,15l-5-3v6L15,15z M17,3H7v1h10V3z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="icontext">Subscriptions</div>
+                        </div>
+                    </li>
+
+                    <li onclick="lib0()">
+                        <div class="icon">
+                            <div class="boxicon">
+                                <svg id="lib1" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <g class="style-scope yt-icon">
+                                        <path
+                                            d="M11,7l6,3.5L11,14V7L11,7z M18,20H4V6H3v15h15V20z M21,18H6V3h15V18z M7,17h13V4H7V17z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg>
+
+                                <svg id="lib2" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none;  width: 100%; height: 100%;">
+                                    <g class="style-scope yt-icon">
+                                        <path d="M4,20h14v1H3V6h1V20z M21,3v15H6V3H21z M17,10.5L11,7v7L17,10.5z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="icontext">Library</div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="video-grid" id="video-grid-title">
+
+            <div class="video-prewiew">
+                <div class="thumbnail-row">
+                    <a href="https://youtu.be/n2RNcPRtAiY">
+                        <img class="Thumbnail1"
+                            src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-1.webp"></a>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-1.jpeg">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            Talking Tech and AI with Google CEO Sundar Pichai!
+                        </p>
+                        <p class="video-author">
+                            Marques Brownlee
+                        </p>
+                        <p class="video-stats">
+                            3.4M views &#183; 6 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://youtu.be/mP0RAo9SKZk"> <img class="Thumbnail1"
+                            src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-2.webp"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-2.jpeg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Try Not To Laugh Challenge #9
+                        </p>
+                        <p class="video-author">
+                            Markiplier
+                        </p>
+                        <p class="video-stats">
+                            19M views &#183; 4 years ago
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://youtu.be/FgjPQQeTh1w">
+                        <img class="Thumbnail1"
+                            src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-3.webp"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-3.jpeg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Crazy Tik Toks Taken Moments Before DISASTER
+                        </p>
+                        <p class="video-author">
+                            SSniperwolf
+                        </p>
+                        <p class="video-stats">
+                            12M views &#183; 1 year ago
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://youtu.be/094y1Z2wpJg"><img class="Thumbnail1"
+                            src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-4.webp"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-4.jpeg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            The Simplest Math Problem No One Can Solve - Collatz Conjecture
+                        </p>
+                        <p class="video-author">
+                            Veritasium
+                        </p>
+                        <p class="video-stats">
+                            18M views &#183; 4 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://youtu.be/86CQq3pKSUw"> <img class="Thumbnail1"
+                            src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-5.webp"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-5.jpeg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Kadane's Algorithm to Maximum Sum Subarray Problem
+                        </p>
+                        <p class="video-author">
+                            CS Dojo
+                        </p>
+                        <p class="video-stats">
+                            519K views &#183; 5 years ago
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://youtu.be/yXWw0_UfSFg"> <img class="Thumbnail1"
+                            src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-6.webp"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-6.jpeg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Anything You Can Fit In The Circle I’ll Pay For
+                        </p>
+                        <p class="video-author">
+                            MrBeast
+                        </p>
+                        <p class="video-stats">
+                            141M views &#183; 1 year ago
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://youtu.be/2ZQVNbA1wgA"> <img class="Thumbnail1"
+                            src="https://i.ytimg.com/vi/2ZQVNbA1wgA/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDNJVcpuovyLMZmuqkOte5dVINTNQ"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="https://wallpaperaccess.com/full/8492739.jpg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Rise Up - Ash Greninja 「AMV」|| Pokémon AMV ||
+                        </p>
+                        <p class="video-author">
+                            Akash
+                        </p>
+                        <p class="video-stats">
+                            141.4M views &#183; 1 year ago
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://youtu.be/QW0A6qa1_PE"> <img class="Thumbnail1"
+                            src="https://i.ytimg.com/vi/QW0A6qa1_PE/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIE8oRjAP&rs=AOn4CLD1Of8waz8Fn6PIaYhYOWOefECWWA"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="https://wallpaperaccess.com/full/8492739.jpg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            बालाजी की कृपा से अपने आप चलने लगा मरीज II श्री बागेश्वर धाम सरकार II श्री धीरेंद्र कृष्ण जी
+                            महाराज
+                        </p>
+                        <p class="video-author">
+                            Akash
+                        </p>
+                        <p class="video-stats">
+                            141.4M views &#183; 1 year ago
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://www.youtube.com/live/uvueXuOh5uM?feature=share"> <img class="Thumbnail1"
+                            src="https://i.ytimg.com/vi/uvueXuOh5uM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnEjv5K-cT6jizFOP9HEYpczZV0w"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-4.jpeg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Superhit Bhajan Of BAGESHWAR DHAM SARKAR | Top 8 Bhajans | Audio Jukebox 2022
+                        </p>
+                        <p class="video-author">
+                            Sanatan bhajan
+                        </p>
+                        <p class="video-stats">
+                            18.5M views &#183; 1 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://youtu.be/wbtJi8tJ02U">
+                        <img class="Thumbnail1"
+                            src="https://i.ytimg.com/vi/wbtJi8tJ02U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSnugmzRt2PScNeaal59-tKzXUCw"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <a href="https://www.youtube.com/@tanaypratap">
+                            <img class="profile-picture"
+                                src="https://yt3.googleusercontent.com/A_3mLbY1nzH3MPjzEftkO8LK02HazD4PWy9XbwLDQ4hDkbBCla4EkcVNM0kZDTeMWqNCD4jVbA=s176-c-k-c0x00ffffff-no-rj"></a>
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Setting up your Computer for PROGRAMMING | Tanay Pratap Hindi
+                        </p>
+                        <p class="video-author">
+                            Tanay Pratap
+                        </p>
+                        <p class="video-stats">
+                            35,225 views &#183; 28 Mar 2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://www.youtube.com/live/uvueXuOh5uM?feature=share"> <img class="Thumbnail1"
+                            src="https://i.ytimg.com/vi/uvueXuOh5uM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnEjv5K-cT6jizFOP9HEYpczZV0w"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-4.jpeg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Superhit Bhajan Of BAGESHWAR DHAM SARKAR | Top 8 Bhajans | Audio Jukebox 2022
+                        </p>
+                        <p class="video-author">
+                            Sanatan bhajan
+                        </p>
+                        <p class="video-stats">
+                            18.5M views &#183; 1 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-prewiew">
+                <div class="Thumbnail-row">
+                    <a href="https://www.youtube.com/live/uvueXuOh5uM?feature=share"> <img class="Thumbnail1"
+                            src="https://i.ytimg.com/vi/uvueXuOh5uM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnEjv5K-cT6jizFOP9HEYpczZV0w"></a>
+                </div>
+                <div class="video-info-grid1">
+                    <div class="channel-picture">
+                        <img class="profile-picture"
+                            src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-4.jpeg">
+                    </div>
+                    <div class="video-info">
+
+                        <p class="video-title">
+                            Superhit Bhajan Of BAGESHWAR DHAM SARKAR | Top 8 Bhajans | Audio Jukebox 2022
+                        </p>
+                        <p class="video-author">
+                            Sanatan bhajan
+                        </p>
+                        <p class="video-stats">
+                            18.5M views &#183; 1 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <!-- i am left -->
+
+        </div>
+    </div>
+
+    <script>
+        var home = 0;
+        function home0() {
+            if (home == 0) {
+                document.getElementById("home1").style.display = "none";
+                document.getElementById("home2").style.display = "block";
+                document.getElementById("short1").style.display = "block";
+                document.getElementById("short2").style.display = "none";
+                document.getElementById("sub1").style.display = "block";
+                document.getElementById("sub2").style.display = "none";
+                document.getElementById("lib1").style.display = "block";
+                document.getElementById("lib2").style.display = "none";
+                home++;
+            }
+            else {
+                document.getElementById("home1").style.display = "block";
+                document.getElementById("home2").style.display = "none";
+                document.getElementById("short1").style.display = "block";
+                document.getElementById("short2").style.display = "none";
+                document.getElementById("sub1").style.display = "block";
+                document.getElementById("sub2").style.display = "none";
+                document.getElementById("lib1").style.display = "block";
+                document.getElementById("lib2").style.display = "none";
+                home--;
+            }
+        }
+
+        var short = 0;
+        function short0() {
+            if (short == 0) {
+                document.getElementById("short1").style.display = "none";
+                document.getElementById("short2").style.display = "block";
+                document.getElementById("home1").style.display = "block";
+                document.getElementById("home2").style.display = "none";
+                document.getElementById("sub1").style.display = "block";
+                document.getElementById("sub2").style.display = "none";
+                document.getElementById("lib1").style.display = "block";
+                document.getElementById("lib2").style.display = "none";
+                short++;
+            }
+            else {
+                document.getElementById("short1").style.display = "block";
+                document.getElementById("short2").style.display = "none";
+                document.getElementById("home1").style.display = "block";
+                document.getElementById("home2").style.display = "none";
+                document.getElementById("sub1").style.display = "block";
+                document.getElementById("sub2").style.display = "none";
+                document.getElementById("lib1").style.display = "block";
+                document.getElementById("lib2").style.display = "none";
+                short--;
+            }
+        }
+
+        var sub = 0;
+        function sub0() {
+            if (sub == 0) {
+                document.getElementById("sub1").style.display = "none";
+                document.getElementById("sub2").style.display = "block";
+                sub++;
+            }
+            else {
+                document.getElementById("sub1").style.display = "block";
+                document.getElementById("sub2").style.display = "none";
+                sub--;
+            }
+        }
+
+        var lib = 0;
+        function lib0() {
+            if (lib == 0) {
+                document.getElementById("lib1").style.display = "none";
+                document.getElementById("lib2").style.display = "block";
+                lib++;
+            }
+            else {
+                document.getElementById("lib1").style.display = "block";
+                document.getElementById("lib2").style.display = "none";
+                lib--;
+            }
+        }
+    </script>
+
+    <script>
+        function searchbox() {
+            document.getElementById("middle-section").style.display = "block";
+            document.getElementById("search-buttons").style.display = "none";
+            document.getElementById("right-section").style.display = "none";
+            document.getElementById("left-section").style.display = "none";
+        }
+        function backbutton() {
+            document.getElementById("search-buttons").style.display = "";
+            document.getElementById("right-section").style.display = "";
+            document.getElementById("left-section").style.display = "";
+            document.getElementById("middle-section").style.display = "none";
+        }
+
+       
+    </script>
+</body>
+
+</html>
